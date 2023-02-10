@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    
+    <title>Spaceland</title>
+</head>
+<body>
+    
+    <script src="./assets/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+    function DarkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+     }
+
+     $(function () {
+    $("#inputCheckIn").datepicker();
+    $("#inputCheckOut").datepicker();
+  
+    $('.level-slider').slick({
+      dots: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: false,
+    });
+  
+  
+    function videoToggle() {
+      video = $('.level-video').get(0)
+      if (video.paused) {
+        video.play();
+        $('.video-control-play').hide();
+        $('.video-control-pause').show();
+      } else {
+        video.pause();
+        $('.video-control-play').show();
+        $('.video-control-pause').hide();
+      }
+    }
+  
+    $('.video-control-play').click(function () {
+      videoToggle();
+    })
+    $('.video-control-pause').click(function () {
+      videoToggle();
+    })
+  
+  });
+     </script>
+
+
+
+
+
+
+
+
+
+          <!-- MAIN MENU -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand ms-auto" href="#">
+              
+              <img src="./assets/img/Icon-L.png" alt="" width="50" height="50">
+              <span class="logo-text">   Baymane</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="level-nav-link nav-link active" aria-current="page" href="#search">Search</a>
+                    <a class="level-nav-link nav-link" href="#services">Youtube</a>
+                    
+                    <a class="level-nav-link nav-link" href="./pp.html">Privacy Policy</a>
+                    <a class="level-nav-link nav-link" class="dark-mode-text" onclick="DarkMode()">Dark mode</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="video">
+        <div class="video-overlay">
+            <i class="fa fa-play-circle video-control-play" style="display="></i>
+            <i class="fa fa-pause-circle video-control-pause" style="display: none;"></i>
+        </div>
+        <div class="video-container">
+            <video class="level-video">
+                <source src="./assets/img/video.mp4" type="video/mp4">
+                <source src="./assets/img/video.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+
+   
+
+
+    
+    <!-- SUBSCRIBE -->
+    <section class="section-color">
+        <div class="container text-center">
+            <h2 class="section-title">Can you help with a subscribe</h2>
+            <p class="section-subtitle">We Need you!</p>
+            <a href="https://www.youtube.com/channel/UChc3YsbUC2aMNHKY_vV928A" class="btn btn-white" ><FONT COLOR: red;></FONT>Subscribe</a>
+        </div>
+    </section>
+
+
+      <div style="height: 100;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer class="footer">
+        <div class="container">
+            <p>Copyright © 2022 MasterGive70 - Design:
+                <a rel="nofollow" href="https://www.youtube.com/channel/UChc3YsbUC2aMNHKY_vV928A" style="color: var(--color-primary) ;" target="_parent">Ayman Bouiraaman</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
